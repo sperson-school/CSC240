@@ -40,13 +40,13 @@ void read_terms_from_file(node_t ** term_list) {
 }
 
 int main(void) {
-    term_t testterm1 = {1, 'x', 0};
-    term_t testterm2 = {2, 'x', 1};
-    term_t testterm3 = {3, 'x', 2};
-
-    poly_t * poly1;
+//    term_t testterm1 = {1, 'x', 0};
+//    term_t testterm2 = {2, 'x', 1};
+//    term_t testterm3 = {3, 'x', 2};
+//
+//    poly_t * poly1;
     poly_t * poly2;
-    node_t * curr;
+//    node_t * curr;
 
     /* Read terms into term_list */
     node_t * term_list = NULL;
@@ -54,10 +54,10 @@ int main(void) {
 
     /* Test term code */
     printf("NAME: SETH PERSON\n");
-    printf("Testing term.c/h:\n");
-    printf("testterm1: %s\n", term_to_string(&testterm1));
-    printf("testterm2: %s\n", term_to_string(&testterm2));
-    printf("testterm3: %s\n", term_to_string(&testterm3));
+//    printf("Testing term.c/h:\n");
+//    printf("testterm1: %s\n", term_to_string(&testterm1));
+//    printf("testterm2: %s\n", term_to_string(&testterm2));
+//    printf("testterm3: %s\n", term_to_string(&testterm3));
 
     /*
         ADD CODE HERE TO ADD THE TERMS IN term_list TO A NEW POLYNOMIAL
@@ -70,24 +70,22 @@ int main(void) {
 
     poly_t * polyBig;
     polyBig = gen_polynomial_from_list(&term_list);
-    print_polynomial(polyBig);
-
-    poly_t * polyCombined;
-    polyCombined = combine_like_terms(polyBig);
-    print_polynomial(polyCombined);
-
-    printf("NAME: SETH PERSON\n");
+//    print_polynomial(polyBig);
 //
-//    /* Polynomial test code */
-//    printf("\nTesting polynomial.c/h : \n");
-//    printf("Original: : ");
-//    print_polynomial(poly1);
-//    poly2 = combine_like_terms(poly1);
-//    printf("\nCombined: : ");
-//    print_polynomial(poly2);
-//    printf("\nNAME: SAMPLE OUTPUT\n");
+//    poly_t * polyCombined;
+//    polyCombined = combine_like_terms(polyBig);
+//    print_polynomial(polyCombined);
 
-
+    /* Polynomial test code */
+    printf("\nTesting polynomial.c/h : \n");
+    printf("Original: : ");
+    print_polynomial(polyBig);
+    poly2 = combine_like_terms(polyBig);
+    printf("\nCombined: : ");
+    print_polynomial(poly2);
+    printf("NAME: SETH PERSON\n");
+    delete_polynomial(&polyBig);
+    delete_polynomial(&poly2);
 
     return 0;
 }
