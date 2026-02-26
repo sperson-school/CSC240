@@ -1,3 +1,4 @@
+//Seth Person
 #include "polynomial.h"
 #include <stdio.h>
 #include <stdlib.h>

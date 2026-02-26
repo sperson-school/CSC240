@@ -1,3 +1,4 @@
+//Seth Person
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 #include "term.h"
