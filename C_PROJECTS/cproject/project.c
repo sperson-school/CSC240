@@ -41,11 +41,11 @@ void read_terms_from_file(node_t ** term_list) {
 }
 
 int main(void) {
-//    term_t testterm1 = {1, 'x', 0};
-//    term_t testterm2 = {2, 'x', 1};
-//    term_t testterm3 = {3, 'x', 2};
+    term_t testterm1 = {1, 'x', 0};
+    term_t testterm2 = {2, 'x', 1};
+    term_t testterm3 = {3, 'x', 2};
 //
-//    poly_t * poly1;
+    poly_t * poly1;
     poly_t * poly2;
 //    node_t * curr;
 
@@ -55,19 +55,20 @@ int main(void) {
 
     /* Test term code */
     printf("NAME: SETH PERSON\n");
-//    printf("Testing term.c/h:\n");
-//    printf("testterm1: %s\n", term_to_string(&testterm1));
-//    printf("testterm2: %s\n", term_to_string(&testterm2));
-//    printf("testterm3: %s\n", term_to_string(&testterm3));
+    printf("Testing term.c/h:\n");
+    printf("testterm1: %s\n", term_to_string(&testterm1));
+    printf("testterm2: %s\n", term_to_string(&testterm2));
+    printf("testterm3: %s\n", term_to_string(&testterm3));
 
     /*
         ADD CODE HERE TO ADD THE TERMS IN term_list TO A NEW POLYNOMIAL
     */
-//    poly1 = new_polynomial();
-//    add_to_polynomial(poly1, &testterm1);
-//    add_to_polynomial(poly1, &testterm2);
-//    add_to_polynomial(poly1, &testterm3);
-//    print_polynomial(poly1);
+    printf("\nTesting basic polynomial combination with test terms: \n");
+    poly1 = new_polynomial();
+    add_to_polynomial(poly1, &testterm1);
+    add_to_polynomial(poly1, &testterm2);
+    add_to_polynomial(poly1, &testterm3);
+    print_polynomial(poly1);
 
     poly_t * polyBig;
     polyBig = gen_polynomial_from_list(&term_list);
@@ -84,7 +85,7 @@ int main(void) {
     poly2 = combine_like_terms(polyBig);
     printf("\nCombined: : ");
     print_polynomial(poly2);
-    printf("NAME: SETH PERSON\n");
+    printf("\nNAME: SETH PERSON\n");
     delete_polynomial(&polyBig);
     delete_polynomial(&poly2);
 
