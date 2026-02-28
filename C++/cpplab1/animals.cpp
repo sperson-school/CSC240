@@ -36,6 +36,13 @@ class Cat : public Animal {
         void speak() override { cout << "  CAT " << name << " : Meow!" << endl; }
         virtual void move() override { cout << "  CAT " << name << " : Later."  << endl; }
 };
+
+class Bird : public Animal {
+    public:
+        Bird(string s="Tweety") : Animal(s) {}
+        void speak() override { cout << "  BIRD " << name << " : Tweet!" << endl; }
+        void move() override { cout << "  BIRD " << name << " : I'm flying!"  << endl; }
+};
         
 
 int main() {
@@ -120,7 +127,13 @@ int main() {
   cout << endl << "Animal reference to an cat object: " << endl;
   acRef.speak();  
   acRef.move();  
-  acRef.eat();  
+  acRef.eat();
+
+  cout << endl << "Bird object: " << endl;
+  Bird b("Tweety");
+  b.speak();
+  b.move();
+  b.eat();
 
   return 0;
 }
